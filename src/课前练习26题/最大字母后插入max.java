@@ -22,7 +22,6 @@ public class 最大字母后插入max {
                     max=chars[i];//max是定义的额外的变量,在int max=chars[0];定义过,并未初始化,,在chars[i]=str.charAt(i)初始化,
                     // 额外变量不影响chars[]数组,知识将chars[i]给了max,而没有给数组
                     k=i;
-
                 }
             }
             for (int i = 0; i <str.length(); i++) {
