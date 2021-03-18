@@ -1,7 +1,6 @@
 package 课前练习26题;
 
 import java.util.Scanner;
-
 /**
  * @version v-1.8.0_131.
  * @auther Jack hou  Email:256595662@qq.com
