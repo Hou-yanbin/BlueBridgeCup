@@ -5,6 +5,21 @@ package 课前练习26题;
  * @data 2021/3/15/22:06
  * @Description:
  **/
+/*
+输入三个字符后，按各字符的ASCII码从小到大的顺序输出这三个字符。
+Input
+输入数据有多组，每组占一行，有三个字符组成，之间无空格。
+Output
+对于每组输入数据，输出一行，字符中间用一个空格分开。
+Sample Input
+qwe
+asd
+zxc
+Sample Output
+e q w
+a d s
+c x z
+ */
 import java.util.Arrays;
 import java.util.Scanner;
 

@@ -8,6 +8,19 @@ import java.util.Scanner;
  * @data 2021/3/17/16:54
  * @Description:
  **/
+/*
+求n个数的最小公倍数。
+Input
+输入包含多个测试实例，每个测试实例的开始是一个正整数n，然后是n个正整数。
+Output
+为每组测试数据输出它们的最小公倍数，每个测试实例的输出占一行。你可以假设最后的输出是一个32位的整数。
+Sample Input
+2 4 6
+3 2 5 7
+Sample Output
+12
+70
+ */
 public class 最小公倍数 {
     public static void main(String[] args) {
                 Scanner sc=new Scanner(System.in);
