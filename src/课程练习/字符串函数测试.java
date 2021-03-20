@@ -12,5 +12,10 @@ public class 字符串函数测试 {
         String s1="asd";
         String s2="jklffd";
         System.out.println(s.replace(s1,s2));
+        String string="ahsduashdias";
+        int arr[]={1,5,2,8,3,2,45,4,};
+        System.out.println(string.length());
+        System.out.println(arr.length);
+
     }
 }
