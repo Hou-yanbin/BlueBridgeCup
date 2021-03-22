@@ -64,6 +64,7 @@ public class 乘积尾零2018 {
         BigInteger sum =new BigInteger("1");
         Scanner scanner=new Scanner(System.in);
         int n=10;
+        long startTime=System.currentTimeMillis();   //获取开始时间
         while (n-->0){
 
             String str=scanner.nextLine();
@@ -78,6 +79,8 @@ public class 乘积尾零2018 {
         }
         System.out.println(sum);//最终这100个数相乘的结果,尾数0的个数查一下就知道了，此处不写代码来算0的个数了
 
+        long endTime=System.currentTimeMillis(); //获取结束时间
+        System.out.println("程序运行时间： "+(endTime-startTime)+"ms");
     }
 }
 
