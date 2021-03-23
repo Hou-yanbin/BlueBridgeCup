@@ -31,11 +31,11 @@ import java.util.Scanner;
 2
  */
 public class 分巧克力 {
-    public static int h[],w[],n,k;//巧克力的长宽//定于两个数组专美用来存储各个巧克力的长和宽
+    public static int h[],w[],n,k;//巧克力的长宽//定于两个数组专门用来存储各个巧克力的长和宽
     public static boolean check(int size){
         int sum=0;//当前巧克力分割的个数
         for (int i = 0; i <n ; i++) {//从第一个巧克力开始到第n个结束
-            sum+=(w[i]/size)*(h[i]/size);//宽度除以size，进行一个向下的取整，长度除以size，进行一个向下的取整，两项相加即是这个大巧克力可以分割的小正方形的个数
+            sum+=(w[i]/size)*(h[i]/size);//宽度除以size，进行一个向下的取整，长度除以size，进行一个向下的取整，两项相乘即是这个大巧克力可以分割的小正方形的个数
         }
         return sum>=k;
     }
@@ -50,7 +50,7 @@ public class 分巧克力 {
             w[i]=scanner.nextInt();
         }
         int left=0,right=100000,mid=0;
-        while (left<=right){//小于等于
+        while (left<=right){//小于等于，遍历获得最适合的中间值（越来越接近最终答案），
             mid=(left+right)/2;//获取中间值
             boolean test0=check(mid),test1=check(mid+1);//mid可以(mid+1)不可以
             if (test0&&!test1){
