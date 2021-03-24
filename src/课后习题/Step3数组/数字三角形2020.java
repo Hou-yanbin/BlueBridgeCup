@@ -41,6 +41,6 @@ public class 数字三角形2020 {
                 arr[i][j]+=Math.max(arr[i-1][j-1],arr[i-1][j]);//寻找动态规划方程：从第一个元素累加上一行的左右两边的数取最大值//没有赋值的数组元素都为零
             }
         }
-        System.out.println(n%2==0?Math.max(arr[n][n/2],arr[n][n/2+1]):arr[n][n/2+1]);
+        System.out.println(n%2==0?Math.max(arr[n][n/2+1],arr[n][n/2]):arr[n][n/2+1]);
     }
 }
