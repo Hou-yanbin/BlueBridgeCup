@@ -34,12 +34,13 @@ public class 数字三角形2020 {
 
         Scanner scanner=new Scanner(System.in);
         int n=scanner.nextInt();
-        int[][] arr=new int[n][n];
-        for (int i = 0; i <n; i++) {
-            for (int j = 0; j <i ; j++) {
+        int[][] arr=new int[n+1][n+1];
+        for (int i = 1; i <=n; i++) {
+            for (int j = 1; j <=i ; j++) {
                 arr[i][j]=scanner.nextInt();
-
+                arr[i][j]+=Math.max(arr[i-1][j-1],arr[i-1][j]);//寻找动态规划方程：从第一个元素累加上一行的左右两边的数取最大值//没有赋值的数组元素都为零
             }
         }
+        System.out.println(n%2==0?Math.max(arr[n][n/2],arr[n][n/2+1]):arr[n][n/2+1]);
     }
 }
