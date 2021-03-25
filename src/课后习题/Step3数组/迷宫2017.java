@@ -83,6 +83,6 @@ public class 迷宫2017 {
                 }
             }
         }
-        System.out.println(fin);
+        System.out.println(fin);//跑出来的人数
     }
 }
