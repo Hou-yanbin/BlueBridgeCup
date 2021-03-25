@@ -1,4 +1,4 @@
-package 课程练习;
+package 课后习题.Step3数组;
 
 import java.util.Arrays;
 
