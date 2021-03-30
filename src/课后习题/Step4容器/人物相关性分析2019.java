@@ -31,13 +31,13 @@ public class 人物相关性分析2019 {
         long ans=0;
         int CF[]=new int[1000009];
         int QZH[]=new int[1000005];
-        for (int t : Al) {
+        for (int t : Al) {//把Alice的每一个t的位置提取出来
             CF[Math.max(0,t-k-3)]++;//-3是因为Alice Bob，减去的Bob//区间左端点加1，区间右端点减1，可以实现这个区间的加法
             CF[Math.min(1000000,t+k+5)]--;
         }
         QZH[0]=CF[0];
         for (int i = 1; i <1000005 ; i++) {
-            QZH[i]=QZH[i-1]+CF[i];
+            QZH[i]=QZH[i-1]+CF[i];//将差分转化为前缀和
         }
         for (int t:Bo){
             ans+=QZH[t];
