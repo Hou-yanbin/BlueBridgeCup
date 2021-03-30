@@ -20,7 +20,7 @@ public class 人物相关性分析2019 {
         ArrayList<Integer> Bo=new ArrayList<Integer>();//记录Bob出现的次数
         for (int i = 0; i <c.length ; i++) {
             if ((i-1<0||c[i-1]=='.'||c[i-1]==' ')&&c[i]=='A'&&c[i+1]=='l'&&c[i+2]=='i'&&c[i+3]=='c'&&c[i+4]=='e'&&(c[i+5]=='.'||c[i+5]==' ')){
-                Al.add(i);
+                Al.add(i);//将Bob出现的i位置加入到ArrayList中
             }
         }
         for (int i = 0; i <c.length ; i++) {
@@ -35,12 +35,12 @@ public class 人物相关性分析2019 {
             CF[Math.max(0,t-k-3)]++;//-3是因为Alice Bob，减去的Bob//区间左端点加1，区间右端点减1，可以实现这个区间的加法
             CF[Math.min(1000000,t+k+5)]--;
         }
-        QZH[0]=CF[0];
+        QZH[0]=CF[0];//提取第一项元素
         for (int i = 1; i <1000005 ; i++) {
             QZH[i]=QZH[i-1]+CF[i];//将差分转化为前缀和
         }
         for (int t:Bo){
-            ans+=QZH[t];
+            ans+=QZH[t];//把所有Bob出现的位置提取出来
         }
         System.out.println(ans);
     }
