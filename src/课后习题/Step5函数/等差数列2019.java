@@ -23,7 +23,7 @@ public class 等差数列2019 {
 
         int diff=0;
         for (int i = 0; i <n-1; i++) {
-         diff=gcd(diff,arr[i+1]-arr[i]);
+         diff=gcd(diff,arr[i+1]-arr[i]);//diff差值和循环的两项之间的差值寻找最大的公约数，即为差值
         }
 
         if (diff==0){
@@ -35,7 +35,7 @@ public class 等差数列2019 {
         }
     }
     public static int gcd(int a,int b) {//欧几里得算法（辗转相除法）
-        return b!=0?gcd(b, a%b):a;//求两个正整数的最大公约数
+        return b!=0?gcd(b, a%b):a;//求两个正整数的最大公约数//0与一个数的最大公约数，就是这个数本身
     }
 
 }
