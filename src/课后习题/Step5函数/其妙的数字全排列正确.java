@@ -6,6 +6,9 @@ package 课后习题.Step5函数;
  * @data 2021/4/5/17:33
  * @Description:
  **/
+/*
+直接暴力循环找出符合条件的，注意数字长度合起来为10位且0~9个数字各出现一次
+ */
 public class 其妙的数字全排列正确 {
     public static int arr[] ={0,1,2,3,4,5,6,7,8,9};
     public static boolean check(long x,long y) {//return false;会直接跳出函数
