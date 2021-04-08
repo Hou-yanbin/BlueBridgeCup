@@ -14,7 +14,7 @@ public class 完全二叉树的权值2019 {
         int n=scanner.nextInt();
         int pfh=0;
         int m=0;
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10000; i++) {
             pfh+=Math.pow(2,i);
             if (pfh>=n){
                 m=(i+1);
@@ -27,10 +27,10 @@ public class 完全二叉树的权值2019 {
                 arr[i][j]=scanner.nextInt();
             }
         }
-        int sum=0;
-        int max=0;
+        long sum=0;
+        long max=Long.MIN_VALUE;
         int index=0;
-        int[] sumCount=new int[m];
+        long[] sumCount=new long[m];
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < Math.pow(2, i); j++) {
@@ -39,7 +39,7 @@ public class 完全二叉树的权值2019 {
             sumCount[i] = sum;
             sum=0;
         }
-        int num=sumCount[0];
+        long num=sumCount[0];
         for (int i = 0; i <m-1 ; i++) {
             if ( num== sumCount[i+1]) {
                 System.out.println("1");
