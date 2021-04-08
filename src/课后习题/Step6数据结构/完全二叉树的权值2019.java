@@ -1,3 +1,4 @@
+package 课后习题.Step6数据结构;
 
 import java.util.Scanner;
 
@@ -7,7 +8,7 @@ import java.util.Scanner;
  * @data 2021/4/8/10:54
  * @Description:
  **/
-public class Main {
+public class 完全二叉树的权值2019 {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         int n=scanner.nextInt();
