@@ -1,5 +1,6 @@
 package 课后习题.Step6数据结构;
-import java.util.Scanner;
+
+import java.util.*;
 
 /**
  * @version v-1.8.0_131.
@@ -9,27 +10,30 @@ import java.util.Scanner;
  **/
 public class 完全二叉树的权值2019正确 {
 
-        public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
-            int n=sc.nextInt();
-            int[] array=new int[100005];
-            for (int i = 0; i < n; i++) {
-                array[i]=sc.nextInt();
+        static int N = 100010;//使得数据范围最大
+        static long[] arr=new long[N];
+        static Scanner sc = new Scanner(System.in);
+        public static void main(String[] args){
+            int n = sc.nextInt();
+            for(int i=1;i<=n;i++){
+                arr[i]=sc.nextInt();
             }
-            long depth=1,max=Integer.MIN_VALUE;
-            int k=0;//k放外面少计算一次每层开始的下标
-            for (int i = 1; i <=Math.log(n+1)/Math.log(2) ; i++) {
-                long sum=0;
-                for(int j=0;j<Math.pow(2, i-1);j++)
-                    sum+=array[k++];
-                if(sum>max)
-                {
-                    max=sum;
-                    depth=i;
+            long max = arr[1];//默认第一个数为最大
+            long deep = 1;//默认第一层开始遍历
+            long a = 1;//用于存放层数
+            //进行遍历处理
+            for(int i = 1;i<n;i=i*2){//每次i的值都为当前层数的首节点编号
+                long res = 0;//定义一个变量存放每次累加的结果
+                for(int j=i;j<=2*i-1&&j<=n;j++){
+                    res = res+arr[j];
                 }
+                if(max<res){
+                    a=deep;
+                    max = res;
+                }
+                deep++;
             }
-            System.out.println(depth);
-            return;
+            System.out.println(a);
         }
+    }
 
-}
