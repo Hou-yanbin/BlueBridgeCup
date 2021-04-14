@@ -42,22 +42,22 @@ public class 四平方和2016 {
         while (scanner.hasNext()){
             int n=scanner.nextInt();
             boolean ok=false;
-            for (int a =0;!ok&& a <=Math.sqrt(n/4); a++) {
+            for (int a =0;!ok&& a <=Math.sqrt(n/4); a++) {//最大，平分成4分，
                 n-=a*a;
-                for (int b = 0;!ok&& b <=Math.sqrt(n/3) ; b++) {
+                for (int b = 0;!ok&& b <=Math.sqrt(n/3) ; b++) {//假设第一个为0，分成3份
                     n-=b*b;
-                    for (int c = 0;!ok&& c <=Math.sqrt(n/2) ; c++) {
+                    for (int c = 0;!ok&& c <=Math.sqrt(n/2) ; c++) {//假设第一和第二个为0，分成3份
                         n-=c*c;
                         int d= (int) Math.sqrt(n);
                         if (d>=c&&d*d==n){   //d*d==n因为在上一步d是取整得到的，有可能d*d不等于n
                             System.out.println(a+" "+b+" "+c+" "+d);
                             ok=true;
                         }
-                        n+=c*c;
+                       n+=c*c;
                     }
-                    n+=b*b;
+                   n+=b*b;
                 }
-                n+=a*a;
+               n+=a*a;
             }
 
 

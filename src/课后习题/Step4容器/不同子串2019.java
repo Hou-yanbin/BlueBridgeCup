@@ -20,12 +20,12 @@ public class 不同子串2019 {
         String str="0100110001010001";
         HashSet<String> ans=new HashSet<String>();//声明HashSet<String>能够自动去重
         for (int i = 0; i < str.length(); i++) {
-            ans.add(str.substring(i));//add()方法将substring(i)加入到ans
+            ans.add(str.substring(i));//add()方法将substring(i)加入到ans//返回一个新的字符串，它是此字符串的一个子字符串。该子字符串从指定索引处的字符开始，直到此字符串末尾。
             for (int j = i+1; j <str.length(); j++) {
                 ans.add(str.substring(i,j));//add()方法将substring(i，j){[i,j)前取后不取}加入到上一步ans的后面
             }
         }
-        System.out.println(ans);
+        //System.out.println(ans);
         System.out.println(ans.size());//ans的大小(种类)
     }
 }

@@ -11,9 +11,9 @@ package 课后习题.Step2流程控制;
 public class 快速乘 {
     public static void main(String[] args) {
         long a=88l;
-        long b=5l;
+        long b=5l;//乘数
         long ans=0;
-        long val=a;
+        long val=a;//val值循环乘2。因为b的二进制表示每一位的1所代表的数是2的倍数且不同的
         while (b!=0){
             if (b%2==1){//如果b%2==1则，在根据b的对应为1看是不是加上此时的a，如果此时位b是数字1，则将ans与val进行相加
                 ans+=val;

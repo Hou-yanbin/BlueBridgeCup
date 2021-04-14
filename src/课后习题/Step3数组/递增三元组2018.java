@@ -38,6 +38,7 @@ public class 递增三元组2018 {
         Scanner scanner=new Scanner(System.in);
         int n=scanner.nextInt();//每行包含n个整数
         int t;
+        
         long arr[] =new long[100005];
         for (int i = 0; i <n ; i++) {
             t=scanner.nextInt()+1;//输入每行的数字,0不好处理所以加 1
@@ -63,5 +64,6 @@ public class 递增三元组2018 {
             crr[i]+=crr[i-1];
         }
         System.out.println(crr[crr.length-1]);
+        System.out.println();
     }
 }

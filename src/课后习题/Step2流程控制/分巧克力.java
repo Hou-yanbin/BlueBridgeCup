@@ -37,7 +37,7 @@ public class 分巧克力 {
         for (int i = 0; i <n ; i++) {//从第一个巧克力开始到第n个结束
             sum+=(w[i]/size)*(h[i]/size);//宽度除以size，进行一个向下的取整，长度除以size，进行一个向下的取整，两项相乘即是这个大巧克力可以分割的小正方形的个数
         }
-        return sum>=k;
+        return sum>=k;//正方形巧克力的数目是否大于人数
     }
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
@@ -53,7 +53,7 @@ public class 分巧克力 {
         while (left<=right){//小于等于，遍历获得最适合的中间值（越来越接近最终答案），
             mid=(left+right)/2;//获取中间值
             boolean test0=check(mid),test1=check(mid+1);//mid可以(mid+1)不可以
-            if (test0&&!test1){
+            if (test0&&!test1){//如果mid可以且mid+1不可以，则mid为正确答案
                 break;
             }else if (test0&&test1){//当前不行则在mid左边
                 left=mid+1;
