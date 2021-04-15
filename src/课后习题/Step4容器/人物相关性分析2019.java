@@ -20,7 +20,7 @@ public class 人物相关性分析2019 {
         ArrayList<Integer> Bo=new ArrayList<Integer>();//记录Bob出现的次数
         for (int i = 0; i <c.length ; i++) {
             if ((i-1<0||c[i-1]=='.'||c[i-1]==' ')&&c[i]=='A'&&c[i+1]=='l'&&c[i+2]=='i'&&c[i+3]=='c'&&c[i+4]=='e'&&(c[i+5]=='.'||c[i+5]==' ')){
-                Al.add(i);//将Bob出现的i位置加入到ArrayList中
+                Al.add(i);//将Alice出现的i位置加入到ArrayList中
             }
         }
         for (int i = 0; i <c.length ; i++) {

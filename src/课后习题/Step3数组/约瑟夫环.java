@@ -15,13 +15,13 @@ package 课后习题.Step3数组;
  */
 public class 约瑟夫环 {
     public static void main(String[] args) {
-        int n=7,m=3;
+        int n=999999,m=5464;
         int[] arr=new int[n];
         for (int i = 0; i <n ; i++) {
             arr[i]=i+1;//将每一个位置上的人赋值
         }
 
-        int out=0,cut=0;//out踢出去的人数，cut
+        int out=0,cut=0;//out踢出去的人数，cut计数轮到几号了
         for (int i = 0; out!=n; i++) {//out!=n说明out踢出去的人还没全踢完
             //取余操作使其永远维持在0到(n-1)之间
             if (arr[i%n]==0){//循环取余每次取余都是在0到(n-1)之间，构成循环，arr[0到（n-1）]循环中有元素等于了0，则继续
