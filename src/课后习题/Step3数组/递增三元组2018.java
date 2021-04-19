@@ -38,11 +38,11 @@ public class 递增三元组2018 {
         Scanner scanner=new Scanner(System.in);
         int n=scanner.nextInt();//每行包含n个整数
         int t;
-        
+        //注意用long来声明数组，否则int会爆
         long arr[] =new long[100005];
         for (int i = 0; i <n ; i++) {
-            t=scanner.nextInt()+1;//输入每行的数字,0不好处理所以加 1
-            arr[t]++;//t的出现次数多了一次
+            t=scanner.nextInt()+1;//输入每行的数字,0不好处理所以加 1,因为不加1的话，在下面的循环arr[0]不好处理
+            arr[t]++;//arr[t值]出现次数多了一次（刚开始arr[]初始化都是默认0），从零开始加一
         }
         for (int i = 1; i <arr.length ; i++) {//对arr数组进行前缀和
             arr[i]+=arr[i-1];
@@ -50,7 +50,7 @@ public class 递增三元组2018 {
         long brr[] =new long[100005];
         for (int i = 0; i <n ; i++) {
             t=scanner.nextInt()+1;//输入每行的数字,0不好处理所以加 1
-            brr[t]+=arr[t-1];//t的出现次数多了一次
+            brr[t]+=arr[t-1];//加的是arr[t-1]是因为有arr[t-1]的前缀和的值可以与brr[t]组成这些个递增序列
         }
         for (int i = 1; i <brr.length ; i++) {//对arr数组进行前缀和
             brr[i]+=brr[i-1];
@@ -58,12 +58,12 @@ public class 递增三元组2018 {
         long crr[] =new long[100005];
         for (int i = 0; i <n ; i++) {
             t=scanner.nextInt()+1;//输入每行的数字,0不好处理所以加 1
-            crr[t]+=brr[t-1];//t的出现次数多了一次
+            crr[t]+=brr[t-1];
         }
-        for (int i = 1; i <crr.length ; i++) {//对arr数组进行前缀和
+        for (int i = 1; i <crr.length ; i++) {//对crr数组进行前缀和
             crr[i]+=crr[i-1];
         }
         System.out.println(crr[crr.length-1]);
-        System.out.println();
+        
     }
 }

@@ -28,7 +28,7 @@ public class 九数算式2017set {
             set.add((int)(x%10));//将取余的元素添加到HashSet中
             x/=10;
         }
-        return !set.contains(0)&&set.size()==9;//contains()判断集合中是否包含某个元素。
+        return !set.contains(0)&&set.size()==9;//contains()判断集合中是否包含某个元素。//set.size()==9如果set.add((int)(x%10));将取余的元素添加到HashSet中有的数字重复了，因为会自动去重所以size到达不了9
     }
     public static void qpl(int k){
         if (k>=arr.length){//如果k>=arr.length就不需要比较了

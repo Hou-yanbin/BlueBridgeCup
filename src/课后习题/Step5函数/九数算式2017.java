@@ -26,7 +26,7 @@ public class 九数算式2017 {
             x /= 10;
         }
         for (int i = 1; i <count.length ; i++) {//从数字1开始到9，
-            if (count[i]!=1)//判断数组的每个位置是不是1（出现1次）
+            if (count[i]!=1)//判断数组的每个位置是不是1（出现1次）//过滤掉了count[0],0的元素没法计算入。
                 return false;
         }
         return true;
