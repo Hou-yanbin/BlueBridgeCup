@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @Description:
  **/
 public class 全排列问题 {
-    public static int arr[] ={1,2,3,4,5,6};
+    public static int arr[] ={1,2,3,4,5,6,7,8,9,0};
     public static void qpl(int k){
         if (k>=arr.length){//如果k>=arr.length就不需要比较了
         	//check();自定义操作
