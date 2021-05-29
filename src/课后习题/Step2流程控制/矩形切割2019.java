@@ -17,12 +17,28 @@ package 课后习题.Step2流程控制;
 切出多少个正方形?
 
  */
+//public class 矩形切割2019 {
+//    public static void main(String[] args) {
+//        int length=2019;
+//        int wide=324;
+//        int count=0;
+//        while (wide!=0){
+//            count+=length/wide;
+//            int temp=length;//注意变量的改变
+//            length=wide;
+//            wide=temp%wide;
+//
+//        }
+//        System.out.println(count);
+//    }
+//}
+
 public class 矩形切割2019 {
     public static void main(String[] args) {
         int length=2019;
         int wide=324;
         int count=0;
-        while (wide!=0){
+        while ((length%wide)!=0){//最后会少一次等取余等于零时不会计数反而会直接退出
             count+=length/wide;
             int temp=length;//注意变量的改变
             length=wide;

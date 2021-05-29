@@ -61,9 +61,8 @@ public class 航班时间2018 {
             int t1_qf = (Integer.valueOf(to_qf[0]) * val[0] + Integer.valueOf(to_qf[1]) * val[1] + Integer.valueOf(to_qf[2]) * val[2]);
             int t1_dd = (Integer.valueOf(to_dd[0]) * val[0] + Integer.valueOf(to_dd[1]) * val[1] + Integer.valueOf(to_dd[2]) * val[2]);
             int t1 = t1_dd - t1_qf;
-            if (qd_to.length == 3)
-                t1 += Integer.valueOf(qd_to[2].substring(2, 3)) * 24 * 60 * 60;
-
+            if (qd_to.length == 3)//如果一行的数组长度为3.则会有（+1）天的这种情况
+                t1 += Integer.valueOf(qd_to[2].substring(2, 3)) * 24 * 60 * 60;//将（+1）那一天添加到总时长中
             //回来
             String come = scanner.nextLine();
             String qd_come[] = come.split(" ");

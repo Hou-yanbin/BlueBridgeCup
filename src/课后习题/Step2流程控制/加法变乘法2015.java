@@ -19,29 +19,43 @@ package 课后习题.Step2流程控制;
  */
 public class 加法变乘法2015 {
     public static void main(String[] args) {
-        int num=1225;
-        for (int i = 1; i < 47; i++) {
-            int sum=0;
-            for (int j = i+2; j <49; j++) {
-                sum=num-(i+i+1)-(j+j+1)+(i*(i+1))+(j*(j+1));//
-                if (sum==2015&&i!=10)
-                    System.out.println(i);
-            }
-
-
-        }
-//        for (int i = 1; i <= 47; i++) {
-//            int num=1225;
-//            for (int j = i+2; j <=49; j++) {
-//                num=num-(i+i+1)-(j+j+1)+(i*(i+1))+(j*(j+1));//回溯法
-//                if (num==2015&&i!=10)
+    	
+    	
+    	int num=1225;
+    	for (int i = 1; i <47; i++) {
+			for (int j = i+2; j <49; j++) {
+				
+				num=num-(i+i+1)-(j+j+1)+(i*(i+1))+(j*(j+1));
+				if (num==2015) {
+					System.out.println(i);
+				}
+				//num=num+(i+i+1)+(j+j+1)-(i*(i+1))-(j+(j+1));
+				num=1225;
+			}
+		}
+//        int num=1225;
+//        for (int i = 1; i < 47; i++) {
+//            int sum=0;
+//            for (int j = i+2; j <49; j++) {
+//                sum=num-(i+i+1)-(j+j+1)+(i*(i+1))+(j*(j+1));//
+//                if (sum==2015&&i!=10)
 //                    System.out.println(i);
-//                //num=1225;或
-                   // sum=sum+(i+i+1)+(j+j+1)-(i*(i+1))-(j*(j+1));//回溯
 //            }
 //
 //
 //        }
+////        for (int i = 1; i <= 47; i++) {
+////            int num=1225;
+////            for (int j = i+2; j <=49; j++) {
+////                num=num-(i+i+1)-(j+j+1)+(i*(i+1))+(j*(j+1));//回溯法
+////                if (num==2015&&i!=10)
+////                    System.out.println(i);
+////                //num=1225;或
+//                   // sum=sum+(i+i+1)+(j+j+1)-(i*(i+1))-(j*(j+1));//回溯
+////            }
+////
+////
+////        }
     }
 
 }
