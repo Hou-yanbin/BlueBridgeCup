@@ -47,13 +47,13 @@ public class 迷宫2017 {
 
     };
     static char c[][]=new char[10][10];//
-    static boolean ans[][]=new boolean[10][10];
+    //static boolean ans[][]=new boolean[10][10];
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             c[i] = s[i].toCharArray();//将字符串数组变成字符数组
         }
         for (int i = 0; i < 10; i++) {
-            System.out.println(Arrays.toString(c[i]));
+            //System.out.println(Arrays.toString(c[i]));
 
         }
         int fin=0;
@@ -61,8 +61,8 @@ public class 迷宫2017 {
             for (int j = 0; j <10 ; j++) {
                 boolean vis[][]=new boolean[10][10];
                 int x=i,y=j;
-                //判断是否在10*10圈内，和判断当前位置是否访问过,若访问过则变为true，！true就变成了false无法通过循环
-                while (x>=0&&x<10&&y>=0&&y<10&&!vis[x][y]){
+                //判断是否在10*10圈内，和判断当前位置是否访问过,//!vis[x][y]这个位置之前没有走过才可以.,访问过每个位置都变为true，！true就变成了false无法通过循环
+                while(x>=0&&x<10&&y>=0&&y<10&&!vis[x][y]){
                     vis[x][y]=true;
                     if (c[x][y]=='U'){
                         x--;
