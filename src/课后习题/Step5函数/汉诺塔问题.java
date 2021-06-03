@@ -13,8 +13,8 @@ public class 汉诺塔问题 {
         }
         else{
             hnt(n-1,from,mid,to);//如果不是一项，将上面的n-1项(碍事）从来的地方放到不碍事（mid）的地方，最后放到（to）
-            System.out.println("把"+n+"号圆盘从"+from+"柱移动到"+to+"柱");
-            hnt(n-1,mid,to,from);
+            System.out.println("把"+n+"号圆盘从"+from+"柱移动到"+to+"柱");//把n号盘子从from移动到to
+            hnt(n-1,mid,to,from);//将上面的n-1项(碍事）从不碍事（mid）的地方，放到（to）
         }
     }
     public static void main(String[] args) {

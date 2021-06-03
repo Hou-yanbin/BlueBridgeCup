@@ -26,9 +26,12 @@ public static long powmod(long a,long b,long p){//a的b次幂，对p取模
 			long ans=1,val=a;
 			while(b!=0){
 				if(b%2==1){
+//					ans*=val;//调用快速乘函数实现
+					
 					ans=mulmod(ans, val, p);	
 					ans%=p;
 				}
+//				val*=val;//调用快速乘函数实现
 				val=mulmod(val, val, p);
 				val%=p;
 				b/=2;

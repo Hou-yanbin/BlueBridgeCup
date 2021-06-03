@@ -27,7 +27,7 @@ public static void main(String[] args) {
 
 	for (int i = 0; i <10; i++) {
 		for (int j = 0; j < 10; j++) {
-			boolean vis[][]=new boolean[10][10];
+			boolean vis[][]=new boolean[10][10];//要放在for循环里，重置
 			int x=i,y=j;
 			while (x>=0&&y>=0&&x<10&&y<10&&!vis[x][y]) {//!vis[x][y]这个位置之前没有走过才可以
 				vis[x][y]=true;
